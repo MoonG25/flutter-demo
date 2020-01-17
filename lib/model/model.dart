@@ -1,6 +1,6 @@
 class Movie {
   final int id;
-  final int popularity;
+  final double popularity;
   final int voteCount;
   final bool video;
   final String posterPath;
@@ -8,9 +8,9 @@ class Movie {
   final String backdropPath;
   final String originalLanguage;
   final String originalTitle;
-  final List<int> genreIds;
+  final List<dynamic> genreIds;
   final String title;
-  final int voteAverage;
+  final num voteAverage;
   final String overview;
   final String releaseDate;
 
@@ -21,22 +21,22 @@ class Movie {
       this.releaseDate});
 
   factory Movie.fromJson(Map<String, dynamic> json) {
-    var results = json['results'];
+    print(json);
     return Movie(
-      id: results['id'],
-      popularity: results['popularity'],
-      voteCount: results['vote_count'],
-      video: results['video'],
-      posterPath: results['poster_path'],
-      adult: results['adult'],
-      backdropPath: results['backdrop_path'],
-      originalLanguage: results['original_language'],
-      originalTitle: results['original_title'],
-      genreIds: results['genre_ids'],
-      title: results['title'],
-      voteAverage: results['vote_average'],
-      overview: results['overview'],
-      releaseDate: results['release_date']
+      id: json['id'],
+      popularity: json['popularity'],
+      voteCount: json['vote_count'],
+      video: json['video'],
+      posterPath: json['poster_path'],
+      adult: json['adult'],
+      backdropPath: json['backdrop_path'],
+      originalLanguage: json['original_language'],
+      originalTitle: json['original_title'],
+      genreIds: json['genre_ids'],
+      title: json['title'],
+      voteAverage: json['vote_average'],
+      overview: json['overview'],
+      releaseDate: json['release_date']
     );
   }
 

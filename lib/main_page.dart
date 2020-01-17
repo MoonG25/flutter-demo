@@ -11,7 +11,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   static const Color _commonColor = Colors.amberAccent;
-  Future<model.Movie> movie;
+  Future<List<model.Movie>> movie;
 
   @override
   void initState() {
@@ -70,11 +70,18 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  Future<model.Movie> fetchMovies() async {
+  Future<List<model.Movie>> fetchMovies() async {
     final response = await http.get('https://api.themoviedb.org/3/movie/popular?api_key=10923b261ba94d897ac6b81148314a3f&language=en-US');
 
     if (response.statusCode == 200) {
-      return model.Movie.fromJson(jsonDecode(response.body));
+      Map<String, dynamic> res = jsonDecode(response.body);
+      List<model.Movie> movies = new List();
+      List<dynamic> dm = res['results'];
+      dm.forEach((e) {
+        model.Movie mv = model.Movie.fromJson(e);
+        movies.add(mv);
+      });
+      return movies;
     } else {
       throw Exception('failed to load post');
     }
