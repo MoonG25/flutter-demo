@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_basic/cupertino_page.dart';
 import 'package:http/http.dart' as http;
 import 'model/model.dart' as model;
 
@@ -66,7 +67,51 @@ class _MainPageState extends State<MainPage> {
             ),
           ),
         ],
-      )
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage('assets/test_image_1.jpg'),
+                  fit: BoxFit.cover
+                ),
+                color: _commonColor,
+              ),
+              child: Text(
+                'Drawer Header',
+                style: TextStyle(
+                  color: _commonColor,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.message),
+              title: Text('Main Page'),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Reg Page'),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/reg');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Movie List Page'),
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/cupertino');
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 
