@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/cupertino_page.dart';
-import 'package:flutter_basic/main_page.dart';
 import 'package:flutter_basic/practice_page.dart';
 import 'package:flutter_basic/root_page.dart';
 
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => MainPage(),
+        '/': (context) => RootPage(),
         '/cupertino': (context) => CupertinoPage(),
         '/practice': (context) => PracticePage('practice'),
         '/reg': (context) => RegPage()
@@ -24,7 +23,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-//      home: RootPage()
     );
   }
 }
