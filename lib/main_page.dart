@@ -12,14 +12,14 @@ List<Movie> parseMovies(String responseBody) {
     movies.add(Movie.fromJson(result));
   });
   return movies;
-//  final parsed = json.decode(responseBody).cast<String, dynamic>();
-//  return parsed.map<Movie>((json) => Movie.fromJson(json)).toList();
 }
 
 Future<List<Movie>> fetchMovies(http.Client client) async {
   final response = await client.get('https://api.themoviedb.org/3/movie/popular?api_key=10923b261ba94d897ac6b81148314a3f&language=en-US');
   return parseMovies(response.body);
 }
+
+
 
 class MainPage extends StatefulWidget {
   @override
@@ -28,6 +28,19 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   static const Color _commonColor = Colors.amberAccent;
+
+  List<Widget> _getMovieList(List<Movie> datas) {
+    List<Widget> widgetList = new List<Widget>();
+    datas.forEach((data) {
+      widgetList.add(MovieCard(data));
+    });
+    return widgetList;
+  }
+
+  dynamic _getMovieCardList() async {
+    List<Movie> movieList = await fetchMovies(http.Client());
+    return _getMovieList(movieList);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -68,20 +81,27 @@ class _MainPageState extends State<MainPage> {
             ),
             expandedHeight: 200,
           ),
-          SliverList(
-            delegate: SliverChildListDelegate([Container(
-              child: FutureBuilder(
-                future: fetchMovies(http.Client()),
-                builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    return new MovieCard(snapshot.data[0]);
-                  } else {
-                    return Center(child: CircularProgressIndicator());
-                  }
-                },
-              ),
-            )]),
-          ),
+          FutureBuilder(
+            future: fetchMovies(http.Client()),
+            builder: (context, snapshot) {
+              var childCount = 0;
+              if (snapshot.hasData) {
+                childCount = snapshot.data.length;
+              }
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                    (context, index) {
+                      if (snapshot.hasData) {
+                        return new MovieCard(snapshot.data[index]);
+                      } else {
+                        return Center(child: CircularProgressIndicator());
+                      }
+                    },
+                  childCount: childCount
+                ),
+              );
+            },
+          )
         ],
       ),
       drawer: Drawer(
