@@ -15,7 +15,7 @@ class _CupertinoPageState extends State<CupertinoPage> {
         middle: Text('CUPERTINO'),
       ),
       body: Column(
-        children: <Widget>[
+        children: [
           CupertinoButton(
             child: Text('CUPERTINO BUTTON'),
             pressedOpacity: 0.4,

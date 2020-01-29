@@ -24,7 +24,7 @@ class _PracticePageState extends State<PracticePage> {
           children: <Widget>[
             Center(
                 child: new Image.asset(
-                  'assets/cinema_background.jpg',
+                  'assets/images/cinema_background.jpg',
                   width: size.width,
                   height: size.height,
                   fit: BoxFit.fill,

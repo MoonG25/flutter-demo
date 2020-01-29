@@ -72,7 +72,7 @@ class _MainPageState extends State<MainPage> {
             floating: false,
             flexibleSpace: FlexibleSpaceBar(
               background: new Image.asset(
-                'assets/ad_1.jpg',
+                'assets/images/ad_1.jpg',
                 height: 200,
                 fit: BoxFit.fill,
                 color: Color.fromRGBO(34, 56, 78, 0.8),
@@ -111,7 +111,7 @@ class _MainPageState extends State<MainPage> {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: ExactAssetImage('assets/test_image_1.jpg'),
+                  image: ExactAssetImage('assets/images/test_image_1.jpg'),
                   fit: BoxFit.cover
                 ),
                 color: _commonColor,

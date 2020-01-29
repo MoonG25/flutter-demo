@@ -80,7 +80,7 @@ class MovieCard extends StatelessWidget {
               Container(width: 32.0),
               Expanded(
                 flex: horizontal ? 1 : 0,
-                child: Text(movie.genreIds[0].toString()),
+                child: Text('장르'),
               ),
             ],
           )
