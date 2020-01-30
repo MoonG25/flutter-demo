@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_basic/model/ad.dart';
 import 'package:flutter_basic/ui/copied_cgv_page/ad_card.dart';
+import 'package:flutter_basic/ui/copied_cgv_page/ad_line.dart';
+import 'package:flutter_basic/ui/copied_cgv_page/movie_list.dart';
 
 class CopiedCGVPage extends StatefulWidget {
 
@@ -83,6 +85,7 @@ class _CopiedCGVPageState extends State<CopiedCGVPage> with SingleTickerProvider
             ),
             Container(
               height: screenHeight * 0.70,
+              color: Color.fromARGB(255, 238, 238, 238),
               child: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
@@ -90,6 +93,9 @@ class _CopiedCGVPageState extends State<CopiedCGVPage> with SingleTickerProvider
                     child: Column(
                       children: <Widget>[
                         AdCard(new Ad(imageUrl: 'assets/images/test_image_1.jpg', subImageUrl: 'assets/images/test_image_1.jpg')),
+                        AdLine(),
+                        MovieList(),
+                        AdLine(),
                       ],
                     ),
                   ),

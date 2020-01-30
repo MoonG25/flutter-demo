@@ -32,6 +32,8 @@ class _AdCardState extends State<AdCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
+      margin: EdgeInsets.all(0.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
