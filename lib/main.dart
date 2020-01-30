@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic/copied_cgv_page.dart';
 import 'package:flutter_basic/cupertino_page.dart';
 import 'package:flutter_basic/practice_page.dart';
 import 'package:flutter_basic/root_page.dart';
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => RootPage(),
         '/cupertino': (context) => CupertinoPage(),
         '/practice': (context) => PracticePage('practice'),
-        '/reg': (context) => RegPage()
+        '/reg': (context) => RegPage(),
+        '/cgv': (context) => CopiedCGVPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,

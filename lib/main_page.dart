@@ -127,24 +127,23 @@ class _MainPageState extends State<MainPage> {
             ListTile(
               leading: Icon(Icons.message),
               title: Text('Main Page'),
-              onTap: () {
-                Navigator.pushNamed(context, '/');
-              },
+              onTap: () => Navigator.pushNamed(context, '/')
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Reg Page'),
-              onTap: () {
-                Navigator.pushNamed(context, '/reg');
-              },
+              onTap: () => Navigator.pushNamed(context, '/reg')
             ),
             ListTile(
               leading: Icon(Icons.settings),
               title: Text('Movie List Page'),
-              onTap: () {
-                Navigator.pushNamed(context, '/cupertino');
-              },
+              onTap: () => Navigator.pushNamed(context, '/cupertino'),
             ),
+            ListTile(
+              leading: Icon(Icons.wb_cloudy),
+              title: Text('Copied CGV Page'),
+              onTap: () => Navigator.pushNamed(context, '/cgv')
+            )
           ],
         ),
       ),
