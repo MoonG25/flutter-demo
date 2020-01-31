@@ -19,8 +19,6 @@ Future<List<Movie>> fetchMovies(http.Client client) async {
   return parseMovies(response.body);
 }
 
-
-
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
