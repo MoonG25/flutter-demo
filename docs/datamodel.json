@@ -1,0 +1,154 @@
+{
+  "app": "app-1",
+  "shop": [
+    {
+      "id": 1,
+      "name": "liquor",
+      "category": [
+        {
+          "id": 1,
+          "name": "wisky",
+          "menu": [
+            { "id": 1, "name": "red wisky", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange wisky", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow wisky", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green wisky", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue wisky", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "rum",
+          "menu": [
+            { "id": 1, "name": "red rum", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange rum", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow rum", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green rum", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue rum", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "champagne",
+          "menu": [
+            { "id": 1, "name": "red champagne", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange champagne", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow champagne", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green champagne", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue champagne", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "wine",
+          "menu": [
+            { "id": 1, "name": "red wine", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange wine", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow wine", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green wine", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue wine", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "vodka",
+          "menu": [
+            { "id": 1, "name": "red vodka", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange vodka", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow vodka", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green vodka", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue vodka", "price": 14000, "amonut": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "food",
+      "category": [
+        {
+          "id": 1,
+          "name": "snack",
+          "menu": [
+            { "id": 1, "name": "red snack", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange snack", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow snack", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green snack", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue snack", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "korean",
+          "menu": [
+            { "id": 1, "name": "red korean", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange korean", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow korean", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green korean", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue korean", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "chinese",
+          "menu": [
+            { "id": 1, "name": "red chinese", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange chinese", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow chinese", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green chinese", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue chinese", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "thai",
+          "menu": [
+            { "id": 1, "name": "red thai", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange thai", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow thai", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green thai", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue thai", "price": 14000, "amonut": 10 }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "japanese",
+          "menu": [
+            { "id": 1, "name": "red japanese", "price": 10000, "amonut": 10 },
+            { "id": 2, "name": "orange japanese", "price": 11000, "amonut": 10 },
+            { "id": 3, "name": "yellow japanese", "price": 12000, "amonut": 10 },
+            { "id": 4, "name": "green japanese", "price": 13000, "amonut": 10 },
+            { "id": 5, "name": "blue japanese", "price": 14000, "amonut": 10 }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [
+    { "id": 1, "name": "1 event", "date": "2020-02-20", "dj": "onedj", "poster": "" },
+    { "id": 2, "name": "2 event", "date": "2020-02-20", "dj": "twodj", "poster": "" },
+    { "id": 3, "name": "3 event", "date": "2020-02-20", "dj": "onedj", "poster": "" },
+    { "id": 4, "name": "4 event", "date": "2020-02-20", "dj": "threedj", "poster": "" },
+    { "id": 5, "name": "5 event", "date": "2020-02-20", "dj": "fivedj", "poster": "" }
+  ],
+  "dj": [
+    { "id": 1, "name": "onedj", "sns": "", "schedules": [
+      { "id": 1, "name": "1 event", "date": "2020-02-20", "dj": "onedj" },
+      { "id": 3, "name": "3 event", "date": "2020-02-20", "dj": "onedj" }
+    ]},
+    { "id": 2, "name": "twodj", "sns": "", "schedules": [
+      { "id": 2, "name": "2 event", "date": "2020-02-20", "dj": "twodj" }
+    ]},
+    { "id": 3, "name": "threedj", "sns": "", "schedules": [
+      { "id": 4, "name": "4 event", "date": "2020-02-20", "dj": "threedj" }
+    ]},
+    { "id": 4, "name": "fourdj", "sns": "", "schedules": []},
+    { "id": 5, "name": "fivedj", "sns": "", "schedules": [
+      { "id": 5, "name": "5 event", "date": "2020-02-20", "dj": "fivedj" }
+    ]}
+  ],
+  "profile": {
+    "isLoggedIn": false,
+    "phoneNumber": null
+  }
+}
