@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basic/model/movie.dart';
-import 'package:flutter_basic/ui/copied_cgv_page/movie_card.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'movie_card.dart';
 
 List<Movie> parseMovies(String responseBody) {
   var results = json.decode(responseBody)['results'];

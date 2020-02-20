@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_basic/copied_cgv_page.dart';
-import 'package:flutter_basic/cupertino_page.dart';
-import 'package:flutter_basic/practice_page.dart';
-import 'package:flutter_basic/root_page.dart';
-
-import 'reg_page.dart';
+import 'pages/page_cgv.dart';
+import 'pages/page_main.dart';
+import 'pages/page_reg.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,11 +13,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => RootPage(),
-        '/cupertino': (context) => CupertinoPage(),
-        '/practice': (context) => PracticePage('practice'),
+        '/': (context) => MainPage(),
         '/reg': (context) => RegPage(),
-        '/cgv': (context) => CopiedCGVPage(),
+        '/cgv': (context) => CGVPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,

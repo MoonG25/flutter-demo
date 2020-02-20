@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_basic/model/ad.dart';
-import 'package:flutter_basic/ui/copied_cgv_page/ad_card.dart';
-import 'package:flutter_basic/ui/copied_cgv_page/ad_line.dart';
-import 'package:flutter_basic/ui/copied_cgv_page/movie_list.dart';
+import '../ui/ad_card.dart';
+import '../ui/ad_line.dart';
+import '../ui/movie_list.dart';
 
-class CopiedCGVPage extends StatefulWidget {
+class CGVPage extends StatefulWidget {
 
-  const CopiedCGVPage({ Key key }) : super(key: key);
+  const CGVPage({ Key key }) : super(key: key);
 
   @override
-  _CopiedCGVPageState createState() => _CopiedCGVPageState();
+  _CGVPageState createState() => _CGVPageState();
 }
 
-class _CopiedCGVPageState extends State<CopiedCGVPage> with SingleTickerProviderStateMixin {
+class _CGVPageState extends State<CGVPage> with SingleTickerProviderStateMixin {
 
   TabController _tabController;
 
@@ -103,7 +103,7 @@ class _CopiedCGVPageState extends State<CopiedCGVPage> with SingleTickerProvider
                     child: Text('Event'),
                   ),
                   SingleChildScrollView(
-                    child: Text('Fast order')
+                      child: Text('Fast order')
                   ),
                   SingleChildScrollView(
                     child: Text('Playzone'),
@@ -130,6 +130,4 @@ class _CopiedCGVPageState extends State<CopiedCGVPage> with SingleTickerProvider
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
     );
   }
-
-
 }
