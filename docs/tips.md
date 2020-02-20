@@ -265,4 +265,14 @@ Model class, ScopedModel 위젯, ScopedModelDescendant 위젯 등을 제공한�
 
 값을 이용하고 싶은 위젯을 Provider로 감싸면된다.
 
-- BLoc
+- BLoC
+
+Presentation Layer와 Business Logic을 분리하여 코드를 작성할 수 있도록 해준다.
+
+Bloc은 스트림을 이용하여 만들어지고 Widget은 Sink를 통해 Bloc에 이벤트를 보낸다.
+
+Bloc객체는 Widget으로부터 이벤트를 전달받으면 필요한 Repository등으로부터 데이터를 전달받아 Business Logic을 처리한다.
+
+Business Logic을 처리한 후 Bloc객체를 구독중인 UI 객체들에게 상태를 전달한다.
+
+RxDart를 이용하거나 Bloc 라이브러리를 사용해서 구현하면 된다.
